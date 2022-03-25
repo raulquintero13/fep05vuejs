@@ -15,6 +15,7 @@
           </ul>
     </nav>
   <router-view />
+  <br><br>footer<br><br>
 </template>
 
 <style>
@@ -97,4 +98,12 @@ nav .active {
     align-items: center;
 	width: 500px;
 }
+.button {
+    font-size: 22px;
+    padding: 4px;
+  }
+  .submitBtn {
+    background-color: #0e78e2;
+    color: white;
+  }
 </style>

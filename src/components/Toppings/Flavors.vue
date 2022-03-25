@@ -3,12 +3,17 @@
   <div class="topping-flavors">
     <h4>Sabores</h4>
     <div class="cards">
-      <div v-for="flavor in $store.state.flavors" :key="flavor.name">
-        <div  :class="flavor.class" @click="$store.dispatch('addFlavor',{flavor})">
-          <h4 class="title">{{ flavor.name }}</h4>
-          <p class="control"><button  >+  {{ flavor.price }}<br> Agregar</button></p>
+      <div v-for="item in $store.state.items" :key="item.name">
+        <div  :class="item.class" @click="$store.dispatch('addItem',{item})" v-if="item.productType == 2">
+          <h4 class="title">{{ item.name }}</h4>
+          <p class="control"><button  >+  {{ item.price }}<br> Agregar</button></p>
         </div>
       </div>
+
+     
+    
+    
+      
     </div>
     
   </div>

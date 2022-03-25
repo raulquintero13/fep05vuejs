@@ -1,19 +1,18 @@
 <template>
   <div class="about">
-    <h2>Personaliza tu pastel</h2>
+    <h2>Completa tus datos</h2>
   </div>
   <div class="container">
     <aside>
       <Preview />
       <div class="formFooter">
       <div >param: {{ this.miParametro }}
-        <router-link :to="{name:'checkout',params:{id:'10'}}"><button class="button submitBtn">Ordenar</button></router-link>
+        <router-link :to="{name:'checkout',params:{id:'10'}}"><button class="button submitBtn">Terminar Orden</button></router-link>
       </div>
       </div>
     </aside>
     <main id="section">
-      <TopppingsFlavors />
-      <TopppingsDecorations />
+      <Checkout />
     </main>
   </div>
 </template>
@@ -25,7 +24,7 @@
   max-width: 1080px;
   height: 100%;
   padding: 20px 20px 0 20px;
-   margin: auto; 
+  margin: auto;
 }
 .container main,
 .container aside {
@@ -48,18 +47,19 @@
   }
 }
 </style>
+
 <script>
 // @ is an alias to /src
-import TopppingsFlavors from "@/components/Toppings/Flavors.vue";
-import TopppingsDecorations from "@/components/Toppings/Decorations.vue";
+import Checkout from '@/components/Checkout.vue'
 import Preview from "@/components/Preview.vue";
 
+
 export default {
-  name: "BuyView",
+  name: 'CheckOutView',
   components: {
-    TopppingsFlavors,
-    TopppingsDecorations,
-    Preview,
-  },
-};
+     Checkout,
+     Preview
+  }
+  
+}
 </script>

@@ -4,10 +4,11 @@
 
 <h4>Decoraciones</h4>
   <div class="cards">
-    
-    <div class="card" v-for="decoration in $store.state.decorations" :key="decoration.id" @click="$store.dispatch('addDecoration',{decoration})">
-      <img class="adornos" v-bind:src="decoration.img" style="width:140px"/>
+    <div v-for="item in $store.state.items" :key="item.id" > 
+    <div class="card" @click="$store.dispatch('addItem',{item})"  v-if="item.productType == 3">
+      <img class="adornos" v-bind:src="item.img" style="width:140px"/>
       <p class="control"><button>+ $30.00<br> Agregar</button></p>
+    </div>
     </div>
   </div>
   

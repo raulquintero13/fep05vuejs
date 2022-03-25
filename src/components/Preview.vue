@@ -23,74 +23,75 @@
             <td  v-if="!item.notDelete"><button @click="$store.dispatch('delItem',{ item, index , $event }) "  itemId ="4" >X </button></td>
 
             </tr >
-            <tr><td></td><td>Total</td><td class="priceItem">{{ $store.state.totalOrder }}</td><td></td></tr>
+            <tr><td></td><td class="totalTitle">Total</td><td class="total">{{ $store.state.totalOrder }}</td><td></td></tr>
         </tbody>
       </table>
 
-      <div class="formFooter">
-        <button @click="$store.dispatch('checkoutBtn')">Ordenar</button>
+      
+        <!-- <button class="button submitBtn" @click="$store.dispatch('checkoutBtn')">Ordenar</button> -->
         <!-- <input
           class="button submitBtn"
           type="submit"
           value="Comprar"
         /> -->
-      </div>
     </div>
   </div>
 </template>
 <style scoped>
-.button {
-  font-size: 22px;
-  padding: 4px;
-}
-.submitBtn {
-  background-color: #0e78e2;
-  color: white;
-}
-.formFooter {
-  padding-top: 20px;
-  text-align: center;
-}
+  
+  .formFooter {
+    padding-top: 20px;
+    text-align: center;
+  }
 
-.details {
-  width: 100%;
-  text-align: center;
-}
-th {
-  border: 1px solid gray;
-  background: #dddddd;
-}
-td.total {
-  text-align: right;
-  font-size: 16px;
-}
-.table {
-  width: 350px;
-  margin-left: auto;
-  margin-right: auto;
-}
-table.details {
-  width: 300px;
-}
-td.item {
-  text-align: left;
-}
-td.priceItem {
-  text-align: right;
-}
-.total {
-  text-align: left;
-  border-top: 1px solid black;
-}
-.formGroup {
-  padding: 4px;
-}
+  .details {
+    width: 100%;
+    text-align: center;
+  }
+  th {
+    border: 1px solid gray;
+    background: #dddddd;
+  }
+  td.total {
+    text-align: right;
+    font-size: 16px;
+  }
+  .table {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table.details {
+    width: 300px;
+  }
+  td.item {
+    text-align: left;
+  }
+  td.priceItem {
+    text-align: right;
+  }
+  .total {
+    text-align: left;
+    font-weight: bold;
+    border-top: 1px solid black;
+  }
+  .totalTitle{
+    text-align: right;
+    font-weight: bold;
+  }
+  .formGroup {
+    padding: 4px;
+  }
 </style>
 <script>
 export default {
   name: "Preview",
   props: {
-    // contador: String,
+    // id: String,
   },
+  miParametro: null,
+    mounted(){
+        this.miParametro = this.$route.params.id;
+    } ,
 };
 </script>
