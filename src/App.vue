@@ -8,14 +8,14 @@
     </header>
     <nav id="navigation" class="">
         <ul>
-            <li><router-link to="/2">Home</router-link></li>
+            <li><router-link to="/">Home</router-link></li>
             <li><router-link to="/buy">Comprar</router-link></li>
             <li><a href="#contact">Contactanos</a></li>
-            <li style="float:right; color:white"><a class="active" href="#about">Carrito ({{$store.state.cart.length}})</a></li>
+            <li style="float:right; color:white"><router-link to="/orders" class="active">Admin ({{$store.state.orders.length}})</router-link></li>
           </ul>
     </nav>
   <router-view />
-  <br><br>footer<br><br>
+  
 </template>
 
 <style>
@@ -44,8 +44,6 @@ header{
 }
 nav{
     background: var(--yellow);
-    /* margin-block-end: 10px; */
-    /* height: 30px; */
 }
 
 nav ul {
@@ -68,7 +66,6 @@ nav li a {
   text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 nav li a:hover {
   background-color: #1a8b62;
   color: white;
@@ -83,7 +80,7 @@ nav .active {
 	flex-direction: row;
     height: 50px;
     padding: 10px 20px 10px 20px;
-}
+} 
 
 .flex-container > .flex-item {
 	flex: auto;

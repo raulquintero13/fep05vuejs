@@ -5,6 +5,20 @@ export default createStore({
   state: {
     contador: 0,
     totalOrder: 450,
+    orders:[
+      {
+        name: 'pedro infante',
+        email: 'pedroinfante@server.com',
+        phone: '686 555 5555',
+        order:[
+          {
+            id:'1',
+            name:'pastel 15cm',
+            price: 450,
+          }
+        ]
+      }
+    ],
     cart: [
       {
         id: 1,
@@ -14,16 +28,16 @@ export default createStore({
       },
     ],
     customer: {
-        name: '',
-        email: '',
-        phone: '',
+        name: 'juan perez',
+        email: 'juan@server.com',
+        phone: '686-555 5555',
     },
     items: [
       {
         id: 7,
         name: "Pastel 15 cm",
         price: 450.0,
-        stock: 0,
+        stock: 1,
         productType: 1,
         class: "card strawberry",
         images: [
@@ -37,7 +51,7 @@ export default createStore({
         id: 8,
         name: "Pastel 30 cm",
         price: 600.0,
-        stock: 0,
+        stock: 2,
         productType: 1,
         class: "card strawberry",
         images: [
@@ -51,7 +65,7 @@ export default createStore({
         id: 9,
         name: "Pastel 45 cm",
         price: 800.0,
-        stock: 0,
+        stock: 3,
         productType: 1,
         class: "card strawberry",
         images: [
@@ -66,7 +80,7 @@ export default createStore({
         id: 10,
         name: "Fresa",
         price: 30.0,
-        stock: 0,
+        stock: 4,
         productType: 2,
         class: "card strawberry",
       },
@@ -74,7 +88,7 @@ export default createStore({
         id: 11,
         name: "Vainilla",
         price: 40.0,
-        stock: 0,
+        stock: 5,
         productType: 2,
         class: "card vanilla",
       },
@@ -82,7 +96,7 @@ export default createStore({
         id: 12,
         name: "Chocolate",
         price: 50.0,
-        stock: 0,
+        stock: 6,
         productType: 2,
         class: "card chocolate",
       },
@@ -90,7 +104,7 @@ export default createStore({
         id: 13,
         name: "Nuez",
         price: 50.0,
-        stock: 0,
+        stock: 7,
         productType: 2,
         class: "card nuez",
       },
@@ -98,7 +112,7 @@ export default createStore({
         id: 1,
         name: "feliz001",
         img: "../../assets/img/adornos/feliz10.png",
-        stock: 0,
+        stock: 8,
         price: 200.0,
         productType: 3,
       },
@@ -106,7 +120,7 @@ export default createStore({
         id: 2,
         name: "happy001",
         img: "../../assets/img/adornos/happy20.png",
-        stock: 0,
+        stock: 9,
         productType: 3,
         price: 200.0,
       },
@@ -114,7 +128,7 @@ export default createStore({
         id: 3,
         name: "happy002",
         img: "../../assets/img/adornos/happy30.png",
-        stock: 0,
+        stock: 10,
         productType: 3,
         price: 200.0,
       },
@@ -122,7 +136,7 @@ export default createStore({
         id: 4,
         name: "happy003",
         img: "../../assets/img/adornos/happy40.png",
-        stock: 0,
+        stock: 11,
         productType: 3,
         price: 200.0,
       },
@@ -130,7 +144,7 @@ export default createStore({
         id: 5,
         name: "happy004",
         img: "../../assets/img/adornos/happy60.png",
-        stock: 0,
+        stock: 12,
         productType: 3,
         price: 200.0,
       },
@@ -138,7 +152,7 @@ export default createStore({
         id: 6,
         name: "happy005",
         img: "../../assets/img/adornos/happy50.png",
-        stock: 0,
+        stock: 13,
         productType: 3,
         price: 200.0,
       },
@@ -195,6 +209,30 @@ export default createStore({
     checkoutBtn() {
         router.push('/checkout');
     },
+    finishOrder() {
+      if (this.state.customer.name != '') {
+      let order = {
+        name: this.state.customer.name,
+        email: this.state.customer.email,
+        phone: this.state.customer.phone,
+        order: this.state.cart,
+      }
+      this.state.orders.push(order);
+      this.state.customer.name = this.state.customer.email = this.state.customer.phone =  '';
+      this.state.cart = [
+        {
+          id: 1,
+          name: "Pastel 15cm",
+          price: 450.0,
+          notDelete: true,
+        },
+      ]
+      let id = this.state.orders.length;
+      router.push('/ticket/' + id);
+    } else {
+      document.querySelector('#errorMsg').innerHTML = 'No se permiten campos vacios!' 
+    }
+    }
   },
   modules: {},
 });

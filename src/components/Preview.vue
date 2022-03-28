@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h4>Vista Preeliminar</h4>
-<router-link to="/buy">Visualizar</router-link>
+    
+
     <img src="../assets/img/pastel.jpg" width="330" />
     <div class="title">
       Pastel de 15 cm <br />

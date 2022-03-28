@@ -4,9 +4,10 @@
   </div>
   <div class="container">
     <aside>
+      <h4>Vista Preeliminar</h4>
       <Preview />
       <div class="formFooter">
-      <div >param: {{ this.miParametro }}
+      <div >
         <router-link :to="{name:'checkout',params:{id:'10'}}"><button class="button submitBtn">Ordenar</button></router-link>
       </div>
       </div>

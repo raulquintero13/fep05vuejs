@@ -4,15 +4,19 @@
   </div>
   <div class="container">
     <aside>
+      <h4>Revise su pedido</h4>
       <Preview />
       <div class="formFooter">
-      <div >param: {{ this.miParametro }}
-        <router-link :to="{name:'checkout',params:{id:'10'}}"><button class="button submitBtn">Terminar Orden</button></router-link>
-      </div>
+      
       </div>
     </aside>
     <main id="section">
       <Checkout />
+      <div >
+        <router-link :to="{name:'checkout',params:{id:'10'}}"><button class="button">Regresar</button></router-link>&nbsp;
+        <!-- <router-link :to="{name:'ticket',params:{id:'10'}}"><button class="button submitBtn">Terminar Orden</button></router-link> -->
+        <button class="button submitBtn" @click="$store.dispatch('finishOrder')" >Terminar Orden</button>
+      </div>
     </main>
   </div>
 </template>
@@ -20,7 +24,7 @@
 .container {
   display: flex;
   flex: 1;
-  flex-flow: row-reverse wrap;
+  /* flex-flow: row-reverse wrap; */
   max-width: 1080px;
   height: 100%;
   padding: 20px 20px 0 20px;
