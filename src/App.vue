@@ -3,7 +3,7 @@
       <header >
         <div class="flex-container">
           <div class="flex-item" id="flex"><img class="logo" src="./assets/img/logo.png" width="125"/></div>
-          <div class="raw-item" id="raw"><button>Admin</button></div>
+          <!-- <div class="raw-item" id="raw"><button>Admin</button></div> -->
         </div>
     </header>
     <nav id="navigation" class="">

@@ -1,13 +1,13 @@
 <template>
     {{ $store.state.contador}}
-    {{ id }}
+    <!-- {{ id }} -->
 </template>
 
 <script>
 export default {
   name: 'Contador',
   props: {
-    id: String,
+    // id: String,
   }
 }
 </script>

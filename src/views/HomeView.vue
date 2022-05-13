@@ -16,10 +16,13 @@
     </div>
     <Contador /> -->
   <br />
-  {{ ($store.state.id = $route.params.id) }}
+  <!-- {{ ($store.state.id = $route.params.id) }} -->
   
 </template> 
 <style scoped>
+body{
+  background: #6999a3;
+}
 .text{
   padding-right: 40px;
   color: white;
@@ -31,7 +34,7 @@
   width: 100%;
   text-align: right;
   /* Full height */
-  height: 700px;
+  height: 800px;
 
   /* Center and scale the image nicely */
   background-position: center;
