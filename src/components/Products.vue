@@ -12,21 +12,21 @@
     <tbody>
       <tr>
         <td class="cuadro">
-          <img class="adornos" src="../../assets/img/adornos/felizCumple.webp" />
+          <img class="adornos" src="./assets/img/adornos/felizCumple.webp" />
           <div class="price">
             <input type="checkbox" id="ad1" value="ad1" />
             <label for="ad1">ad001 <br />  + $ 30.00</label>
           </div>
         </td>
         <td class="cuadro">
-          <img class="adornos" src="../../assets/img/adornos/happyBirthday.webp" />
+          <img class="adornos" src="./assets/img/adornos/happyBirthday.webp" />
           <div class="price">
             <input type="checkbox" id="ad1" value="ad1" />
             <label for="ad1">ad001 <br />  + $ 30.00</label>
           </div>
         </td>
         <td class="cuadro">
-          <img class="adornos" src="../../assets/img/adornos/happyBirthday2.webp" />
+          <img class="adornos" src="./assets/img/adornos/happyBirthday2.webp" />
           <div class="price">
             <input type="checkbox" id="ad1" value="ad1" />
             <label for="ad1"
@@ -38,7 +38,7 @@
       </tr>
       <tr>
         <td class="cuadro">
-          <img class="adornos" src="../../assets/img/adornos/happyBirthday3.webp" />
+          <img class="adornos" src="./assets/img/adornos/happyBirthday3.webp" />
           <div class="price">
             <input type="checkbox" id="ad1" value="ad1" />
             <label for="ad1"
@@ -48,7 +48,7 @@
           </div>
         </td>
         <td class="cuadro">
-          <img class="adornos" src="../../assets/img/adornos/hapy50.webp" />
+          <img class="adornos" src="./assets/img/adornos/hapy50.webp" />
           <div class="price">
             <input type="checkbox" id="ad1" value="ad1" />
             <label for="ad1"
