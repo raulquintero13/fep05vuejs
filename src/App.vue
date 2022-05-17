@@ -2,7 +2,7 @@
  
       <header >
         <div class="flex-container">
-          <div class="flex-item" id="flex"><img class="logo" src="./assets/img/logo.png" width="125"/></div>
+          <div class="flex-item" id="flex"><img class="logo" src="./fep05vuejs/assets/img/logo.png" width="125"/></div>
           <!-- <div class="raw-item" id="raw"><button>Admin</button></div> -->
         </div>
     </header>
