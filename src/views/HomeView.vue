@@ -15,7 +15,7 @@
         
     </div>
     <Contador /> -->
-  <br />
+  <!-- <br> -->
   <!-- {{ ($store.state.id = $route.params.id) }} -->
   
 </template> 
@@ -30,7 +30,7 @@ body{
   line-height: 6em;
 }
 .bg {
-  background-image: url("../img/pasteleria-fondo.jpg");
+  background-image: url("../assets/img/pasteleria-fondo.jpg");
   width: 100%;
   text-align: right;
   /* Full height */

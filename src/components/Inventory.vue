@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: 'Contador',
+  name: 'Inventory',
   props: {
     id: String,
   }
