@@ -1,5 +1,8 @@
 # vue-launchx2
 
+demo: https://raulquintero13.github.io/fep05vuejs/
+
+
 ## Project setup
 ```
 npm install
