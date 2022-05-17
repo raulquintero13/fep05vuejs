@@ -111,7 +111,7 @@ export default createStore({
       {
         id: 1,
         name: "feliz001",
-        img: "../../assets/img/adornos/feliz10.png",
+        img: "./assets/img/adornos/feliz10.png",
         stock: 8,
         price: 200.0,
         productType: 3,
@@ -119,7 +119,7 @@ export default createStore({
       {
         id: 2,
         name: "happy001",
-        img: "../../assets/img/adornos/happy20.png",
+        img: "./assets/img/adornos/happy20.png",
         stock: 9,
         productType: 3,
         price: 200.0,
@@ -127,7 +127,7 @@ export default createStore({
       {
         id: 3,
         name: "happy002",
-        img: "../../assets/img/adornos/happy30.png",
+        img: "./assets/img/adornos/happy30.png",
         stock: 10,
         productType: 3,
         price: 200.0,
@@ -135,7 +135,7 @@ export default createStore({
       {
         id: 4,
         name: "happy003",
-        img: "../../assets/img/adornos/happy40.png",
+        img: "./assets/img/adornos/happy40.png",
         stock: 11,
         productType: 3,
         price: 200.0,
@@ -143,7 +143,7 @@ export default createStore({
       {
         id: 5,
         name: "happy004",
-        img: "../../assets/img/adornos/happy60.png",
+        img: "./assets/img/adornos/happy60.png",
         stock: 12,
         productType: 3,
         price: 200.0,
@@ -151,7 +151,7 @@ export default createStore({
       {
         id: 6,
         name: "happy005",
-        img: "../../assets/img/adornos/happy50.png",
+        img: "./assets/img/adornos/happy50.png",
         stock: 13,
         productType: 3,
         price: 200.0,
