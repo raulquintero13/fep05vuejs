@@ -30,7 +30,7 @@ body{
   line-height: 6em;
 }
 .bg {
-  background-image: url("./fep05vuejs/assets/img/pasteleria-fondo.jpg");
+  background-image: url("https://raulquintero13.github.io/fep05vuejs/assets/img/pasteleria-fondo.jpg");
   width: 100%;
   text-align: right;
   /* Full height */
