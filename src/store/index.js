@@ -111,7 +111,7 @@ export default createStore({
       {
         id: 1,
         name: "feliz001",
-        img: "./assets/img/adornos/feliz10.png",
+        img: "./assets/img/adornos/feliz101.png",
         stock: 8,
         price: 200.0,
         productType: 3,
